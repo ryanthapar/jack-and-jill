@@ -10,10 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #101a2c;
-    --navy-soft: #16233b;
-    --gold: #cf9a4c;
-    --gold-light: #e8c98a;
+    --navy: #123b4e;
+    --navy-soft: #184e66;
+    --gold: #2e9e44;
+    --gold-light: #8fe3a0;
+    --red: #d6332b;
+    --red-dark: #b02821;
+    --pink: #f2a0c4;
+    --pink-light: #fbe0ec;
     --cream: #faf7f2;
     --ink: #1c2433;
     --muted: #5c6577;
@@ -78,7 +82,7 @@
   .btn-primary {
     background: var(--gold);
     color: var(--navy);
-    box-shadow: 0 10px 24px rgba(207,154,76,0.35);
+    box-shadow: 0 10px 24px rgba(46,158,68,0.35);
   }
   .btn-primary:hover { background: var(--gold-light); }
 
@@ -101,7 +105,7 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(16,26,44,0.92);
+    background: rgba(18,59,78,0.92);
     backdrop-filter: blur(8px);
   }
   nav.wrap {
@@ -148,7 +152,7 @@
   /* HERO */
   .hero {
     background:
-      radial-gradient(ellipse at top right, rgba(207,154,76,0.18), transparent 55%),
+      radial-gradient(ellipse at top right, rgba(46,158,68,0.18), transparent 55%),
       linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
     color: #fff;
     padding: 76px 0 90px;
@@ -200,8 +204,8 @@
   }
   .price-card .tag {
     display: inline-block;
-    background: rgba(207,154,76,0.14);
-    color: #9a6b1f;
+    background: rgba(46,158,68,0.14);
+    color: #b02821;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -317,7 +321,7 @@
     height: 42px;
     padding: 0 8px;
     border-radius: 10px;
-    background: rgba(207,154,76,0.16);
+    background: rgba(46,158,68,0.16);
     color: var(--gold-light);
     display: inline-flex;
     align-items: center;
@@ -382,8 +386,8 @@
   }
   .compare-card.active {
     border-color: var(--gold);
-    background: linear-gradient(180deg, #fff, #fdf8ee);
-    box-shadow: 0 20px 40px rgba(207,154,76,0.12);
+    background: linear-gradient(180deg, #fff, #f0f9f1);
+    box-shadow: 0 20px 40px rgba(46,158,68,0.12);
   }
   .compare-card h3 {
     font-size: 19px;
@@ -528,7 +532,7 @@
 
   /* FINAL CTA */
   .final-cta {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    background: linear-gradient(135deg, var(--pink) 0%, var(--pink-light) 100%);
     text-align: center;
   }
   .final-cta h2 {
@@ -537,16 +541,16 @@
     margin-bottom: 14px;
   }
   .final-cta p {
-    color: rgba(16,26,44,0.75);
+    color: rgba(18,59,78,0.75);
     margin-bottom: 30px;
     font-size: 16px;
   }
   .final-cta .btn-primary {
-    background: var(--navy);
+    background: var(--red);
     color: #fff;
-    box-shadow: 0 10px 24px rgba(16,26,44,0.25);
+    box-shadow: 0 10px 24px rgba(214,51,43,0.3);
   }
-  .final-cta .btn-primary:hover { background: #22314e; }
+  .final-cta .btn-primary:hover { background: var(--red-dark); }
 
   footer {
     background: var(--navy);
@@ -620,7 +624,7 @@
   <section>
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" style="color:#9a6b1f;">Sound familiar?</span>
+        <span class="eyebrow" style="color:#b02821;">Sound familiar?</span>
         <h2>You know what to do. You just need it to stick.</h2>
         <p>Most agents don't fail because they don't know real estate — they fail because nothing is holding them accountable to show up, day after day.</p>
       </div>
@@ -692,7 +696,7 @@
   <section id="how-it-works">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" style="color:#9a6b1f;">How it works</span>
+        <span class="eyebrow" style="color:#b02821;">How it works</span>
         <h2>Simple format. No overwhelm.</h2>
         <p>Jack &amp; Jill is intentionally lean — the structure of a bootcamp, without cramming in everything at once.</p>
       </div>
@@ -720,7 +724,7 @@
   <section class="compare">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" style="color:#9a6b1f;">Is this the right fit?</span>
+        <span class="eyebrow" style="color:#b02821;">Is this the right fit?</span>
         <h2>Your on-ramp to a stronger business</h2>
         <p>Not sure if you need Jack &amp; Jill or something more advanced? Here's the honest breakdown.</p>
       </div>
@@ -755,7 +759,7 @@
   <section class="instructor">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" style="color:#9a6b1f;">Led by</span>
+        <span class="eyebrow" style="color:#b02821;">Led by</span>
         <h2>Coached by someone who's in it with you</h2>
       </div>
       <div class="instructor-card">
@@ -797,7 +801,7 @@
   <section id="faq">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" style="color:#9a6b1f;">FAQ</span>
+        <span class="eyebrow" style="color:#b02821;">FAQ</span>
         <h2>Good to know</h2>
       </div>
       <div class="faq-list">
