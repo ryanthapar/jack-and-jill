@@ -18,6 +18,7 @@
     --red-dark: #b02821;
     --pink: #f2a0c4;
     --pink-light: #fbe0ec;
+    --yellow: #ffd23f;
     --cream: #faf7f2;
     --ink: #1c2433;
     --muted: #5c6577;
@@ -317,18 +318,15 @@
     padding: 28px;
   }
   .feature-card .icon {
-    min-width: 42px;
-    height: 42px;
+    min-width: 44px;
+    height: 44px;
     padding: 0 8px;
     border-radius: 10px;
     background: rgba(46,158,68,0.16);
-    color: var(--gold-light);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 16px;
   }
   .feature-card h3 {
@@ -517,6 +515,61 @@
     color: var(--muted);
   }
 
+  .price-duo {
+    display: grid;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  @media (min-width: 760px) {
+    .price-duo { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  }
+  .price-duo .pricing-card { max-width: none; margin: 0; }
+  .price-bonus {
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .price-bonus .ribbon {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .price-bonus h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .price-bonus p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    max-width: 320px;
+  }
+  .price-bonus .value-tag {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 999px;
+  }
+
   /* FAQ */
   .faq-list { max-width: 760px; margin: 0 auto; }
   .faq-item {
@@ -593,27 +646,27 @@
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow">For agents ready to build real consistency</span>
-        <h1>Build the habits. Stay accountable. <em>Stay in the business.</em></h1>
-        <p class="lead">Jack &amp; Jill is a low-entry, online training program built around accountability, mindset, and consistency — plus a full year of ongoing support so you actually keep showing up.</p>
+        <h1>Real estate is an uphill battle. <em>We'll help you get back up.</em></h1>
+        <p class="lead">Jack &amp; Jill is a coaching program for real estate agents who struggle with accountability and consistency — live Zoom classes, biweekly reports, and a coach in your corner.</p>
         <div class="hero-actions">
           <a href="#pricing" class="btn btn-primary">Reserve Your Spot</a>
           <a href="#whats-included" class="btn btn-ghost">See What's Included</a>
         </div>
         <div class="hero-meta">
-          <span><span class="dot"></span> Live online, Monday &amp; Wednesday</span>
-          <span><span class="dot"></span> 1 year of ongoing support included</span>
+          <span><span class="dot"></span> Zoom classes twice a month · Mondays at 11 AM</span>
+          <span><span class="dot"></span> Coached by Monica Thapar</span>
           <span><span class="dot"></span> Built for new &amp; returning agents</span>
         </div>
       </div>
       <div class="price-card">
-        <span class="tag">Intro Pricing</span>
+        <span class="tag">$149 · 12-Month Commitment</span>
         <div class="amount">$149<small>/month</small></div>
-        <p class="note">Low entry point — no massive upfront commitment required.</p>
+        <p class="note">A real commitment for real consistency — not a quick fix.</p>
         <ul>
-          <li><span class="check">✓</span> Live Monday &amp; Wednesday sessions</li>
-          <li><span class="check">✓</span> Accountability, mindset &amp; consistency coaching</li>
-          <li><span class="check">✓</span> Ongoing support for farming</li>
-          <li><span class="check">✓</span> 1 year of ongoing helpline support</li>
+          <li><span class="check">✓</span> Live Zoom classes, twice a month</li>
+          <li><span class="check">✓</span> Biweekly accountability reports</li>
+          <li><span class="check">✓</span> Income goal &amp; activity tracking</li>
+          <li><span class="check">✓</span> Bonus: 1-on-1 branding session with Monica ($1,500 value)</li>
         </ul>
         <a href="#pricing" class="btn btn-primary">Get Started</a>
       </div>
@@ -625,7 +678,7 @@
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow" style="color:#b02821;">Sound familiar?</span>
-        <h2>You know what to do. You just need it to stick.</h2>
+        <h2>Because real estate is an uphill battle — and sometimes we fall down</h2>
         <p>Most agents don't fail because they don't know real estate — they fail because nothing is holding them accountable to show up, day after day.</p>
       </div>
       <div class="pain-grid">
@@ -639,7 +692,7 @@
         </div>
         <div class="pain-item">
           <div class="mark">03</div>
-          <p>No one is checking in on whether you actually did the work.</p>
+          <p>No one is tracking whether you actually made the calls or knocked the doors.</p>
         </div>
         <div class="pain-item">
           <div class="mark">04</div>
@@ -655,38 +708,33 @@
       <div class="section-head">
         <span class="eyebrow">What you get</span>
         <h2>Built around accountability, not theory</h2>
-        <p>Jack &amp; Jill isn't about memorizing more material — it's about having the structure and support to actually follow through, week after week.</p>
+        <p>Jack &amp; Jill isn't about memorizing more material — it's about having the structure and support to actually follow through, twice a month, every month.</p>
       </div>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="icon">A</div>
-          <h3>Accountability</h3>
-          <p>Real check-ins on whether you're actually doing the work — not just learning about it.</p>
+          <div class="icon">🎥</div>
+          <h3>Zoom Classes</h3>
+          <p>Live coaching with Monica, twice a month, every Monday at 11 AM.</p>
         </div>
         <div class="feature-card">
-          <div class="icon">M</div>
-          <h3>Mindset</h3>
-          <p>Working through the head trash and hesitation that keeps agents from taking action.</p>
+          <div class="icon">📋</div>
+          <h3>Stay Accountable</h3>
+          <p>Report on your activities — door knocking, calls, and more — so nothing slips through the cracks.</p>
         </div>
         <div class="feature-card">
-          <div class="icon">C</div>
-          <h3>Consistency</h3>
-          <p>Building the habits that keep you showing up, even when it's not convenient.</p>
+          <div class="icon">🎯</div>
+          <h3>Set Your Income Goal</h3>
+          <p>We'll help you work back from your income goal to the number of contacts you need to make per day.</p>
         </div>
         <div class="feature-card">
-          <div class="icon">F</div>
-          <h3>Ongoing Farming Support</h3>
-          <p>Help staying in front of your sphere and your farm, long after the course ends.</p>
+          <div class="icon">📊</div>
+          <h3>Biweekly Reports</h3>
+          <p>Regular check-ins that keep you on track, with a constant emphasis on consistency.</p>
         </div>
         <div class="feature-card">
-          <div class="icon">?</div>
-          <h3>Real Questions, Answered</h3>
-          <p>A place to bring the day-to-day questions that come up as you're actually doing the work.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">1yr</div>
-          <h3>A Full Year of Support</h3>
-          <p>Ongoing access to the helpline for a full year — this isn't support that ends when the sessions do.</p>
+          <div class="icon">📈</div>
+          <h3>Overcome Setbacks</h3>
+          <p>Learn how to get back up the hill when things don't go as planned — and keep climbing.</p>
         </div>
       </div>
     </div>
@@ -703,18 +751,18 @@
       <div class="steps">
         <div class="step">
           <div class="num">1</div>
-          <h3>Join live, online</h3>
-          <p>Sessions run every Monday and Wednesday — no travel, no in-person commitment.</p>
+          <h3>Join live, on Zoom</h3>
+          <p>Classes run twice a month, every Monday at 11 AM — no travel required.</p>
         </div>
         <div class="step">
           <div class="num">2</div>
-          <h3>Show up &amp; get checked on</h3>
-          <p>Accountability, mindset, and consistency coaching paired with real check-ins on your progress.</p>
+          <h3>Report &amp; get tracked</h3>
+          <p>Log your activity, hit your daily contact targets, and get a biweekly report on your progress.</p>
         </div>
         <div class="step">
           <div class="num">3</div>
-          <h3>Keep the support for a year</h3>
-          <p>After the course, you keep access to an ongoing helpline for the questions that come up in the real world.</p>
+          <h3>Keep climbing</h3>
+          <p>When setbacks hit — and they will — you've got a coach and a system to help you get back up the hill.</p>
         </div>
       </div>
     </div>
@@ -734,11 +782,11 @@
           <h3>Jack &amp; Jill</h3>
           <span class="who">New &amp; returning agents</span>
           <ul>
-            <li>100% online — Monday &amp; Wednesday sessions</li>
-            <li>Low entry price point</li>
-            <li>Accountability, mindset &amp; consistency coaching</li>
-            <li>Ongoing support for farming</li>
-            <li>1 year of ongoing helpline support</li>
+            <li>Zoom classes twice a month, Mondays at 11 AM</li>
+            <li>$149/mo, 12-month commitment</li>
+            <li>Biweekly accountability reports</li>
+            <li>Income goal &amp; activity tracking</li>
+            <li>Coached by Monica Thapar</li>
           </ul>
         </div>
         <div class="compare-card">
@@ -763,10 +811,10 @@
         <h2>Coached by someone who's in it with you</h2>
       </div>
       <div class="instructor-card">
-        <div class="instructor-avatar">R</div>
+        <div class="instructor-avatar">M</div>
         <div class="instructor-text">
-          <h3>Ricardo</h3>
-          <p>Jack &amp; Jill is led by Ricardo, focused on keeping the program hands-on and practical — real accountability and real check-ins, not just theory.</p>
+          <h3>Monica Thapar</h3>
+          <p>Jack &amp; Jill is coached by Monica Thapar — hands-on accountability, biweekly reporting, and a system built to help you push through the setbacks that stall most agents.</p>
         </div>
       </div>
     </div>
@@ -778,21 +826,28 @@
       <div class="section-head">
         <span class="eyebrow">Pricing</span>
         <h2>A low-entry way to build real consistency</h2>
-        <p>Straightforward pricing — no bootcamp-sized bill for a bootcamp-sized commitment.</p>
+        <p>Straightforward pricing, backed by a 12-month commitment to the habits that actually move your business.</p>
       </div>
-      <div class="pricing-card">
-        <div class="tag">Jack &amp; Jill Program</div>
-        <div class="amount">$149<small>/mo</small></div>
-        <div class="range">Introductory pricing (up to $199/mo) — final rate and term confirmed at enrollment.</div>
-        <ul>
-          <li><span class="check">✓</span> Live online sessions every Monday &amp; Wednesday</li>
-          <li><span class="check">✓</span> Accountability, mindset &amp; consistency coaching</li>
-          <li><span class="check">✓</span> Ongoing support for farming</li>
-          <li><span class="check">✓</span> Real questions, answered</li>
-          <li><span class="check">✓</span> 1 full year of helpline access after the program</li>
-        </ul>
-        <a href="mailto:ryan@thaparteam.ca?subject=Enroll%20in%20Jack%20%26%20Jill" class="btn btn-primary">Enroll in Jack &amp; Jill</a>
-        <p class="fine">Questions about payment terms? Reach out and we'll walk you through it.</p>
+      <div class="price-duo">
+        <div class="pricing-card">
+          <div class="tag">Jack &amp; Jill Program</div>
+          <div class="amount">$149<small>/mo</small></div>
+          <div class="range">12-month commitment</div>
+          <ul>
+            <li><span class="check">✓</span> Live Zoom classes, twice a month (Mondays, 11 AM)</li>
+            <li><span class="check">✓</span> Biweekly accountability reports</li>
+            <li><span class="check">✓</span> Income goal &amp; activity tracking</li>
+            <li><span class="check">✓</span> Coached by Monica Thapar</li>
+          </ul>
+          <a href="mailto:ryan@thaparteam.ca?subject=Enroll%20in%20Jack%20%26%20Jill" class="btn btn-primary">Enroll in Jack &amp; Jill</a>
+          <p class="fine">Questions about payment terms? Reach out and we'll walk you through it.</p>
+        </div>
+        <div class="price-bonus">
+          <span class="ribbon">Join Today</span>
+          <h3>Get a 1-on-1 Branding Session with Monica</h3>
+          <p>Enroll today and get a private branding session with Monica, on us — help positioning you and your business to stand out.</p>
+          <span class="value-tag">$1,500 Value</span>
+        </div>
       </div>
     </div>
   </section>
@@ -807,7 +862,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is Jack &amp; Jill in-person or online?</h3>
-          <p>Fully online. Live sessions run every Monday and Wednesday, so you can join from anywhere.</p>
+          <p>Fully online. Live Zoom classes run twice a month, every Monday at 11 AM, so you can join from anywhere.</p>
         </div>
         <div class="faq-item">
           <h3>What's the difference between Jack &amp; Jill and Humpty Dumpty?</h3>
@@ -815,15 +870,15 @@
         </div>
         <div class="faq-item">
           <h3>What do I actually get?</h3>
-          <p>Accountability, mindset, and consistency coaching, plus ongoing support for staying in front of your farm and a place to bring your real day-to-day questions.</p>
+          <p>Live Zoom coaching twice a month, activity reporting (door knocking, calls, and more), help setting your income goal, and biweekly reports to keep you accountable and consistent.</p>
         </div>
         <div class="faq-item">
-          <h3>Does the support end when the course does?</h3>
-          <p>No. You get a full year of ongoing helpline support after the program, so you have somewhere to go when real questions come up.</p>
+          <h3>What's the commitment?</h3>
+          <p>$149/month on a 12-month commitment — enough time to actually build the habits that stick, not just learn about them.</p>
         </div>
         <div class="faq-item">
           <h3>Who leads the program?</h3>
-          <p>Jack &amp; Jill is led by Ricardo, with a focus on keeping things practical and hands-on.</p>
+          <p>Jack &amp; Jill is coached by Monica Thapar. Enroll today and you'll also get a 1-on-1 branding session with her — a $1,500 value.</p>
         </div>
       </div>
     </div>
@@ -832,8 +887,8 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="wrap">
-      <h2>Stop starting over. Build consistency that lasts.</h2>
-      <p>Join Jack &amp; Jill and get the accountability and support system to keep you moving forward.</p>
+      <h2>Stop falling down. Start climbing.</h2>
+      <p>Join Jack &amp; Jill and get the accountability system — plus a bonus branding session with Monica — to keep you moving up the hill.</p>
       <a href="mailto:ryan@thaparteam.ca?subject=Enroll%20in%20Jack%20%26%20Jill" class="btn btn-primary">Reserve Your Spot</a>
     </div>
   </section>
