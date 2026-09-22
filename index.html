@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack & Jill | Agent Training Program by The Thapar Team</title>
+<meta name="description" content="Jack & Jill is a low-entry online training program that gives new and returning agents the scripts, objections, skills, accountability, and a full year of ongoing support to build real consistency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #101a2c;
+    --navy-soft: #16233b;
+    --gold: #cf9a4c;
+    --gold-light: #e8c98a;
+    --cream: #faf7f2;
+    --ink: #1c2433;
+    --muted: #5c6577;
+    --line: #e7e2d8;
+    --radius: 16px;
+    --max: 1120px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Poppins', system-ui, sans-serif;
+    line-height: 1.15;
+  }
+
+  a { color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 10px 24px rgba(207,154,76,0.35);
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-ghost {
+    background: transparent;
+    border-color: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .btn-ghost:hover { border-color: #fff; }
+
+  .btn-outline {
+    background: transparent;
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+  .btn-outline:hover { background: var(--navy); color: #fff; }
+
+  /* NAV */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(16,26,44,0.92);
+    backdrop-filter: blur(8px);
+  }
+  nav.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+  }
+  .logo strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .logo span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta { display: none; }
+  @media (min-width: 860px) { .nav-cta { display: inline-flex; } }
+  .nav-menu-links { display: none; }
+  @media (min-width: 860px) { .nav-menu-links { display: flex; } }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(ellipse at top right, rgba(207,154,76,0.18), transparent 55%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color: #fff;
+    padding: 76px 0 90px;
+  }
+  .hero-grid {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; }
+  }
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold-light);
+  }
+  .hero p.lead {
+    font-size: 18px;
+    color: rgba(255,255,255,0.82);
+    max-width: 520px;
+    margin-bottom: 32px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+  .price-card {
+    background: #fff;
+    color: var(--ink);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  }
+  .price-card .tag {
+    display: inline-block;
+    background: rgba(207,154,76,0.14);
+    color: #9a6b1f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .price-card .amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .price-card .amount small {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .price-card .note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+  .price-card ul {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .price-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14.5px;
+    padding: 8px 0;
+    border-top: 1px solid var(--line);
+  }
+  .price-card li:first-child { border-top: none; }
+  .check {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .price-card .btn { width: 100%; }
+
+  /* SECTIONS */
+  section { padding: 88px 0; }
+  .section-head {
+    max-width: 640px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+  .section-head h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    color: var(--muted);
+    font-size: 16.5px;
+  }
+
+  /* PAIN POINTS */
+  .pain-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .pain-item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px;
+  }
+  .pain-item .mark {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .pain-item p { color: var(--muted); font-size: 15px; }
+
+  /* SOS */
+  .sos {
+    background: var(--navy);
+    color: #fff;
+  }
+  .sos .section-head h2 { color: #fff; }
+  .sos .section-head p { color: rgba(255,255,255,0.72); }
+
+  .sos-letters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+  .sos-letters span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--gold-light);
+    border: 1px solid rgba(207,154,76,0.4);
+    border-radius: 999px;
+    padding: 8px 18px;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .feature-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .feature-card .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(207,154,76,0.16);
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .feature-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .feature-card p {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.68);
+  }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .step {
+    text-align: center;
+    padding: 8px;
+  }
+  .step .num {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .step h3 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
+  .step p { font-size: 14.5px; color: var(--muted); }
+
+  /* WHO ITS FOR / COMPARE */
+  .compare {
+    background: #fff;
+  }
+  .compare-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 760px) {
+    .compare-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .compare-card {
+    border-radius: var(--radius);
+    padding: 30px;
+    border: 1px solid var(--line);
+  }
+  .compare-card.active {
+    border-color: var(--gold);
+    background: linear-gradient(180deg, #fff, #fdf8ee);
+    box-shadow: 0 20px 40px rgba(207,154,76,0.12);
+  }
+  .compare-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .compare-card .who {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .compare-card ul { list-style: none; }
+  .compare-card li {
+    font-size: 14.5px;
+    color: var(--muted);
+    padding: 6px 0;
+    display: flex;
+    gap: 10px;
+  }
+  .compare-card li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  .compare-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--navy);
+    color: var(--gold-light);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  /* INSTRUCTOR */
+  .instructor {
+    background: var(--cream);
+  }
+  .instructor-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .instructor-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .instructor-text h3 { font-size: 19px; color: var(--navy); margin-bottom: 6px; }
+  .instructor-text p { color: var(--muted); font-size: 15px; }
+
+  /* PRICING */
+  .pricing {
+    background: var(--navy);
+    color: #fff;
+  }
+  .pricing .section-head h2 { color: #fff; }
+  .pricing .section-head p { color: rgba(255,255,255,0.72); }
+  .pricing-card {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #fff;
+    color: var(--ink);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+  }
+  .pricing-card .amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 10px 0 2px;
+  }
+  .pricing-card .amount sup { font-size: 20px; top: -22px; }
+  .pricing-card .amount small { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .pricing-card .range {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 28px;
+  }
+  .pricing-card li {
+    display: flex;
+    gap: 10px;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14.5px;
+  }
+  .pricing-card li:first-child { border-top: none; }
+  .pricing-card .btn { width: 100%; margin-bottom: 12px; }
+  .pricing-card .fine {
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  /* FAQ */
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .faq-item h3 {
+    font-size: 16.5px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .faq-item p { color: var(--muted); font-size: 15px; }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .final-cta p {
+    color: rgba(16,26,44,0.75);
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .final-cta .btn-primary {
+    background: var(--navy);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(16,26,44,0.25);
+  }
+  .final-cta .btn-primary:hover { background: #22314e; }
+
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.6);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 13.5px;
+  }
+  footer a { color: var(--gold-light); text-decoration: none; }
+  footer .foot-logo {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <strong>Jack &amp; Jill</strong>
+      <span>A Thapar Team Training Program</span>
+    </a>
+    <div class="nav-menu-links nav-links">
+      <a href="#whats-included">What You Get</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#pricing" class="btn btn-primary nav-cta">Enroll Now</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">For agents ready to build real consistency</span>
+        <h1>Learn the scripts. Build the habits. <em>Stay in the business.</em></h1>
+        <p class="lead">Jack &amp; Jill is a low-entry, online training program that gives you the scripts, objection handling, and core skills every agent needs — plus a full year of accountability and support to actually make it stick.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">Reserve Your Spot</a>
+          <a href="#whats-included" class="btn btn-ghost">See What's Included</a>
+        </div>
+        <div class="hero-meta">
+          <span><span class="dot"></span> Live online, Monday &amp; Wednesday</span>
+          <span><span class="dot"></span> 1 year of ongoing support included</span>
+          <span><span class="dot"></span> Built for new &amp; returning agents</span>
+        </div>
+      </div>
+      <div class="price-card">
+        <span class="tag">Intro Pricing</span>
+        <div class="amount">$149<small>/month</small></div>
+        <p class="note">Low entry point — no massive upfront commitment required.</p>
+        <ul>
+          <li><span class="check">✓</span> Live Monday &amp; Wednesday sessions</li>
+          <li><span class="check">✓</span> Full Scripts · Objections · Skills curriculum</li>
+          <li><span class="check">✓</span> Accountability &amp; mindset coaching</li>
+          <li><span class="check">✓</span> 1 year of ongoing helpline support</li>
+        </ul>
+        <a href="#pricing" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#9a6b1f;">Sound familiar?</span>
+        <h2>You know what to do. You just need it to stick.</h2>
+        <p>Most agents don't fail because they don't know real estate — they fail because nothing is holding them accountable to show up, day after day.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-item">
+          <div class="mark">01</div>
+          <p>You know the scripts exist, but freeze up the moment a real conversation starts.</p>
+        </div>
+        <div class="pain-item">
+          <div class="mark">02</div>
+          <p>You're consistent for a week, then it quietly falls apart — again.</p>
+        </div>
+        <div class="pain-item">
+          <div class="mark">03</div>
+          <p>No one is checking in on whether you actually did the work.</p>
+        </div>
+        <div class="pain-item">
+          <div class="mark">04</div>
+          <p>You want real structure and support — without paying bootcamp-level prices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="sos" id="whats-included">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The framework</span>
+        <h2>Everything runs on S.O.S.</h2>
+        <p>Scripts. Objections. Skills. It's the shortest path to sounding confident and staying consistent — and it's the foundation of everything we teach in Jack &amp; Jill.</p>
+      </div>
+      <div class="sos-letters">
+        <span>S — Scripts</span>
+        <span>O — Objections</span>
+        <span>S — Skills</span>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">S</div>
+          <h3>Scripts</h3>
+          <p>The exact words to use in real conversations, so you're never guessing what to say next.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">O</div>
+          <h3>Objections</h3>
+          <p>How to hear "no" — or hesitation — and keep the conversation moving with confidence.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">S</div>
+          <h3>Skills</h3>
+          <p>The core fundamentals that make every other part of the business easier.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">A</div>
+          <h3>Accountability</h3>
+          <p>Real check-ins on whether you're actually doing the work — not just learning about it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">M</div>
+          <h3>Mindset &amp; Consistency</h3>
+          <p>Building the habits that keep you showing up, even when it's not convenient.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">F</div>
+          <h3>Ongoing Farming Support</h3>
+          <p>Help staying in front of your sphere and your farm, long after the course ends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#9a6b1f;">How it works</span>
+        <h2>Simple format. No overwhelm.</h2>
+        <p>Jack &amp; Jill is intentionally lean — the structure of a bootcamp, without cramming in everything at once.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Join live, online</h3>
+          <p>Sessions run every Monday and Wednesday — no travel, no in-person commitment.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Work the S.O.S. curriculum</h3>
+          <p>Scripts, objections, and skills training paired with real accountability check-ins.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Keep the support for a year</h3>
+          <p>After the course, you keep access to an ongoing helpline for the questions that come up in the real world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#9a6b1f;">Is this the right fit?</span>
+        <h2>Your on-ramp to a stronger business</h2>
+        <p>Not sure if you need Jack &amp; Jill or something more advanced? Here's the honest breakdown.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card active">
+          <span class="compare-badge">This Program</span>
+          <h3>Jack &amp; Jill</h3>
+          <span class="who">New &amp; returning agents</span>
+          <ul>
+            <li>100% online — Monday &amp; Wednesday sessions</li>
+            <li>Low entry price point</li>
+            <li>Scripts, objections, and core skills</li>
+            <li>Accountability, mindset &amp; consistency coaching</li>
+            <li>1 year of ongoing helpline support</li>
+          </ul>
+        </div>
+        <div class="compare-card">
+          <h3>Humpty Dumpty</h3>
+          <span class="who">Agents making $150K–$200K+</span>
+          <ul>
+            <li>In-person, 2 hours every week</li>
+            <li>2 flash calls per month</li>
+            <li>Advanced listing &amp; buyer training</li>
+            <li>For more seasoned, established agents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR -->
+  <section class="instructor">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#9a6b1f;">Led by</span>
+        <h2>Coached by someone who's in it with you</h2>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-avatar">R</div>
+        <div class="instructor-text">
+          <h3>Ricardo</h3>
+          <p>Jack &amp; Jill is led by Ricardo, focused on keeping the program hands-on, practical, and genuinely useful — real scripts and real accountability, not just theory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h2>A low-entry way to build real consistency</h2>
+        <p>Straightforward pricing — no bootcamp-sized bill for a bootcamp-sized commitment.</p>
+      </div>
+      <div class="pricing-card">
+        <div class="tag">Jack &amp; Jill Program</div>
+        <div class="amount">$149<small>/mo</small></div>
+        <div class="range">Introductory pricing (up to $199/mo) — final rate and term confirmed at enrollment.</div>
+        <ul>
+          <li><span class="check">✓</span> Live online sessions every Monday &amp; Wednesday</li>
+          <li><span class="check">✓</span> Full Scripts · Objections · Skills curriculum</li>
+          <li><span class="check">✓</span> Accountability, mindset &amp; consistency coaching</li>
+          <li><span class="check">✓</span> Ongoing farming support</li>
+          <li><span class="check">✓</span> 1 full year of helpline access after the program</li>
+        </ul>
+        <a href="mailto:ryan@thaparteam.ca?subject=Enroll%20in%20Jack%20%26%20Jill" class="btn btn-primary">Enroll in Jack &amp; Jill</a>
+        <p class="fine">Questions about payment terms? Reach out and we'll walk you through it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#9a6b1f;">FAQ</span>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Is Jack &amp; Jill in-person or online?</h3>
+          <p>Fully online. Live sessions run every Monday and Wednesday, so you can join from anywhere.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's the difference between Jack &amp; Jill and Humpty Dumpty?</h3>
+          <p>Jack &amp; Jill is the entry-level, online program for new and returning agents. Humpty Dumpty is built for more seasoned agents making $150K–$200K+, and runs in person for two hours a week with two additional flash calls per month.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What do I actually get taught?</h3>
+          <p>The S.O.S. framework — Scripts, Objections, and Skills — plus accountability, mindset, consistency, and ongoing support for staying in front of your farm.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does the support end when the course does?</h3>
+          <p>No. You get a full year of ongoing helpline support after the program, so you have somewhere to go when real questions come up.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who leads the program?</h3>
+          <p>Jack &amp; Jill is led by Ricardo, with a focus on keeping things practical and hands-on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Stop starting over. Build consistency that lasts.</h2>
+      <p>Join Jack &amp; Jill and get the scripts, skills, and support system to keep you moving forward.</p>
+      <a href="mailto:ryan@thaparteam.ca?subject=Enroll%20in%20Jack%20%26%20Jill" class="btn btn-primary">Reserve Your Spot</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Jack &amp; Jill</div>
+    <p>A Thapar Team Training Program · <a href="mailto:ryan@thaparteam.ca">ryan@thaparteam.ca</a></p>
+    <p style="margin-top:10px;">© <span id="year"></span> The Thapar Team. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
