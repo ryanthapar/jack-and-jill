@@ -389,11 +389,30 @@
     border-radius: var(--radius);
     padding: 30px;
     border: 1px solid var(--line);
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
   .compare-card.active {
     border-color: var(--gold);
     background: linear-gradient(180deg, #fff, #f0f9f1);
     box-shadow: 0 20px 40px rgba(46,158,68,0.12);
+  }
+  .compare-card--link {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .compare-card--link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(18,59,78,0.14);
+    border-color: var(--navy);
+  }
+  .compare-link-hint {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--navy);
   }
   .compare-card h3 {
     font-size: 19px;
@@ -797,7 +816,7 @@
             <li>Coached by Ricardo Peixoto</li>
           </ul>
         </div>
-        <div class="compare-card">
+        <a class="compare-card compare-card--link" href="https://ryanthapar.github.io/humpty-dumpty/" target="_blank" rel="noopener">
           <h3>Humpty Dumpty</h3>
           <span class="who">Agents making $150K–$200K+</span>
           <ul>
@@ -806,7 +825,8 @@
             <li>Advanced listing &amp; buyer training</li>
             <li>For more seasoned, established agents</li>
           </ul>
-        </div>
+          <span class="compare-link-hint">Visit Humpty Dumpty →</span>
+        </a>
       </div>
     </div>
   </section>
